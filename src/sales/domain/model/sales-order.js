@@ -1,4 +1,6 @@
-class SalesOrder {
+import { SalesOrderItem } from './sales-order-item.js';
+
+export class SalesOrder {
 	constructor(id, customerId) {
 		this._id = id;
 		this.customerId = customerId;
@@ -16,7 +18,11 @@ class SalesOrder {
 		);
 	}
 
-	calculateTotal() {
+	calculateTotalPrice() {
 		return this._items.reduce((total, item) => total + item.calculateItemPrice(), 0);
+	}
+
+	get items() {
+		return this._items;
 	}
 }
