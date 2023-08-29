@@ -3,10 +3,10 @@ export class SalesOrderItem {
 		this._orderId = orderId;
 		this._productId = productId;
 		this._quantity = quantity;
-		this._unitProice = unitPrice;
+		this._unitPrice = unitPrice;
 	}
 
 	calculateItemPrice() {
-		return this._unitPrice * this._quantity;
+		return this._quantity * this._unitPrice;
 	}
 }

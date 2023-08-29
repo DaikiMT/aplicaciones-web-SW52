@@ -2,8 +2,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { SalesOrderItem } from './sales-order-item.js';
 
 export class SalesOrder {
-	constructor(id, customerId) {
-		this._id = uuidv4(id);
+	constructor(customerId) {
+		this._id = uuidv4();
 		this.customerId = customerId;
 		this._items = [];
 	}
